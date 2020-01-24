@@ -61,6 +61,8 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_INCLUDE_TUNSAFE/d' .config #删除配置项adbyby plus+
         sed -i '/CONFIG_FIRMWARE_INCLUDE_ALIDDNS/d' .config #删除配置项阿里DDNS
         sed -i '/CONFIG_FIRMWARE_INCLUDE_VLMCSD/d' .config #删除配置项VLMCSD
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_TROJAN/d' .config #删除配置项TROJAN
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_KOOLPROXY/d' .config #删除配置项KOOLPROXY
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SMARTDNS/d' .config
         ######################################################################
         #以下选项是定义你需要的功能（y=集成,n=忽略），重新写入到.config文件
@@ -76,6 +78,8 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_TUNSAFE=n" >> .config #TUNSAFE
         echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=y" >> .config #阿里DDNS
         echo "CONFIG_FIRMWARE_INCLUDE_VLMCSD=y" >> .config #VLMCSD
+        echo "CONFIG_FIRMWARE_INCLUDE_TROJAN=y" >> .config #TROJAN
+        echo "CONFIG_FIRMWARE_INCLUDE_KOOLPROXY=y" >> .config #KOOLPROXY
         echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNS=y" >> .config #smartdns
         echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNSBIN=y" >> .config #smartdns二进制文件
         echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=n" >> .config #v2ray二进制文件
